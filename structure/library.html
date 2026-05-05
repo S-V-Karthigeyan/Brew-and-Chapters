@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Chapters</title>
+  <link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/nav.css">
+  <link rel="stylesheet" href="../style/library.css">
+  <link rel="icon" href="../image/logo1.png?v=2">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div id="site-nav" data-page="library"></div>
+<!-- Hero Section with Looping Video -->
+<section class="hero-video-section">
+  <video autoplay muted loop playsinline class="menu-video">
+    <source src="../video/book.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay"></div>
+  <div class="hero-content">
+      <h1>Welcome to Our Library</h1>
+      <p>Where coffee meets stories — sip, read, and dream.</p>
+  </div>
+</section>
+
+<section class="story">
+  <img src="../image/library-cafe.jpg" alt="Cafe Library Corner">
+  <div class="story-text">
+    <h2>More Than Just Coffee</h2>
+    <p>
+      Our cozy library corner is built for dreamers and thinkers — a peaceful escape where stories come alive with every page you turn. Whether you’re into romance, thrilling mysteries, timeless classics, or inspiring non-fiction, you’ll always find something that speaks to your soul.
+      Sink into a comfortable seat, surrounded by shelves filled with carefully curated books, and let yourself get lost in a world of imagination. The soft aroma of freshly brewed coffee, the gentle hum of quiet conversations, and the warmth of a welcoming space create the perfect atmosphere to unwind.
+      Whether you're here for a quick read, a deep dive into a novel, or simply to relax with your favorite cup, our library is designed to be your personal retreat. Pair your story with a handcrafted drink, discover new favorites, and let every visit become a beautiful chapter of your day.
+    </p>
+  </div>
+</section>
+
+  <!-- LIBRARY WRAPPER (unchanged) -->
+   <div class="color">
+  <div class="wrapper">
+
+    <div class="bnav">
+      <h2>F I C T I O N</h2>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books...">
+      </div>
+
+      <div class="bar">
+        <button onclick="filterBooks('all', this)">All</button>
+        <button onclick="filterBooks('romance', this)">Romance</button>
+        <button onclick="filterBooks('thriller', this)">Mystery / Thriller</button>
+        <button onclick="filterBooks('classics', this)">Classics</button>
+        <button onclick="filterBooks('fantasy', this)">Fantasy</button>
+        <button onclick="filterBooks('contemporary', this)">Contemporary</button>
+        <button onclick="filterBooks('non-fiction', this)">Non-Fiction</button>
+      </div>
+    </div>
+
+    <div class="container library-books">
+
+      <!-- Romance -->
+      <img src="../image/bk1.png" alt="It Ends With Us" data-category="romance">
+      <img src="../image/bk2.png" alt="It Starts With Us" data-category="romance">
+      <img src="../image/bk8.png" alt="The Love Hypothesis" data-category="romance">
+      <img src="../image/bk9.png" alt="Ugly Love" data-category="romance">
+      <img src="../image/bk13.png" alt="Reminders of Him" data-category="romance">
+      <img src="../image/bk14.png" alt="The Spanish Love Deception" data-category="romance">
+      <img src="../image/bk16.png" alt="The Shaadi Set-Up" data-category="romance">
+      <img src="../image/bk31.png" alt="The Idea of You" data-category="romance">
+      <img src="../image/bk33.png" alt="A Thousand Boy Kisses" data-category="romance">
+      <img src="../image/bk34.png" alt="A Million Kisses in Your Lifetime" data-category="romance">
+
+      <!-- Thriller -->
+      <img src="../image/bk3.png" alt="The Silent Patient" data-category="thriller">
+      <img src="../image/bk10.png" alt="Verity" data-category="thriller">
+      <img src="../image/bk18.png" alt="A Good Girl's Guide to Murder" data-category="thriller">
+      <img src="../image/bk19.png" alt="The Book of Accidents" data-category="thriller">
+      <img src="../image/bk20.png" alt="Mystery by Moonlight" data-category="thriller">
+
+      <!-- Classics -->
+      <img src="../image/bk4.png" alt="The Kite Runner" data-category="classics">
+      <img src="../image/bk5.png" alt="The Alchemist" data-category="classics">
+      <img src="../image/bk25.png" alt="Emma" data-category="classics">
+      <img src="../image/bk26.png" alt="Pride and Prejudice" data-category="classics">
+      <img src="../image/bk39.png" alt="The Great Gatsby" data-category="classics">
+
+      <!-- Fantasy -->
+      <img src="../image/bk21.png" alt="Harry Potter Series" data-category="fantasy">
+      <img src="../image/bk30.png" alt="Shatter Me Series" data-category="fantasy">
+      <img src="../image/bk40.png" alt="Island Witch" data-category="fantasy">
+
+      <!-- Contemporary -->
+      <img src="../image/bk6.png" alt="A Man Called Ove" data-category="contemporary">
+      <img src="../image/bk7.png" alt="Seven Husbands of Evelyn Hugo" data-category="contemporary">
+      <img src="../image/bk22.png" alt="The Wingman" data-category="contemporary">
+      <img src="../image/bk23.png" alt="Daydream Series" data-category="contemporary">
+      <img src="../image/bk24.png" alt="The Perfect Prom Date" data-category="contemporary">
+      <img src="../image/bk32.png" alt="A Thousand Splendid Suns" data-category="contemporary">
+
+      <!-- Non-Fiction -->
+      <img src="../image/bk27.png" alt="The Psychology of Money" data-category="non-fiction">
+      <img src="../image/bk36.png" alt="Ikigai" data-category="non-fiction">
+      <img src="../image/bk37.png" alt="Atomic Habits" data-category="non-fiction">
+      <img src="../image/bk38.png" alt="The Subtle Art of Not Giving a F*ck" data-category="non-fiction">
+
+      <div id="noResults" class="no-results">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+        <h3>No books found 😢</h3>
+        <p>Looks like this story isn’t on our shelves yet...  
+          Maybe try another search or grab a coffee while we find it ☕📖
+        </p>
+      </div>
+
+      <div id="libraryContainer"></div>
+
+    </div>
+  </div>
+</div>
+
+<h2 class="reader-title">What our readers say</h2>
+  <!-- COMMUNITY -->
+<div class="slide-track">
+
+  <!-- Romance -->
+  <div class="card">
+    <p>“The romance collection here is just perfect — loved reading It Ends With Us with a cappuccino!”</p>
+    <h4>- Priya (Romance)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Every love story feels more magical in this cozy space.”</p>
+    <h4>- Ananya (Romance)</h4>
+  </div>
+
+  <!-- Thriller -->
+  <div class="card">
+    <p>“Reading thrillers like The Silent Patient here gave me chills — such a great vibe!”</p>
+    <h4>- Rahul (Thriller)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Perfect place for mystery lovers — quiet, intense, and immersive.”</p>
+    <h4>- Arjun (Thriller)</h4>
+  </div>
+
+  <!-- Classics -->
+  <div class="card">
+    <p>“Enjoyed Pride and Prejudice with a latte — felt like stepping into another era.”</p>
+    <h4>- Meera (Classics)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Classic reads + calm ambience = pure bliss.”</p>
+    <h4>- Kavya (Classics)</h4>
+  </div>
+
+  <!-- Fantasy -->
+  <div class="card">
+    <p>“Harry Potter hits different here — feels like Hogwarts with coffee!”</p>
+    <h4>- Thejas (Fantasy)</h4>
+  </div>
+
+  <div class="card">
+    <p>“The fantasy section truly lets your imagination run wild.”</p>
+    <h4>- Rohan (Fantasy)</h4>
+  </div>
+
+  <!-- Contemporary -->
+  <div class="card">
+    <p>“Modern stories and cozy seating — perfect for relaxing evenings.”</p>
+    <h4>- Divya (Contemporary)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Loved reading A Man Called Ove here — felt so peaceful.”</p>
+    <h4>- Sneha (Contemporary)</h4>
+  </div>
+
+  <!-- Non-Fiction -->
+  <div class="card">
+    <p>“Great place to read Atomic Habits and stay motivated.”</p>
+    <h4>- Sooraj (Non-Fiction)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Non-fiction section is inspiring — perfect for growth and focus.”</p>
+    <h4>- Kiran (Non-Fiction)</h4>
+  </div>
+
+  <!-- DUPLICATE FOR SMOOTH LOOP -->
+  <div class="card">
+    <p>“The romance collection here is just perfect — loved reading It Ends With Us with a cappuccino!”</p>
+    <h4>- Priya (Romance)</h4>
+  </div>
+
+  <div class="card">
+    <p>“Reading thrillers like The Silent Patient here gave me chills — such a great vibe!”</p>
+    <h4>- Rahul (Thriller)</h4>
+  </div>
+
+</div>
+
+  <!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: info@brewandchapters.com</p>
+      <p>Phone: +91 13254 76980</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Visit Us</h3>
+      <p>123 Coffee Lane, Bangalore</p>
+      <p>Mon–Sun: 8am – 10pm</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../image/instagram.png"></a>
+        <a href="#"><img src="../image/facebook.png"></a>
+        <a href="#"><img src="../image/twitter.png"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2025 Brew & Chapters. All Rights Reserved.</p>
+</footer>
+
+  <script type="module" src="../js/library.js"></script>
+  <script src="..//js/script.js"></script>
+  <script type="module" src="../js/menu.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

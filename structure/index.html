@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Chapters</title>
+<link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/nav.css">
+<link rel="stylesheet" href="../style/coffee.css"> 
+<link rel="stylesheet" href="../style/index.css"> 
+<link rel="icon" href="../image/logo1.png?v=2"> 
+
+</head> 
+<body>
+  
+<div id="site-nav" data-page="home"></div>
+<!-- Hero Section with Video Background -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="../video/home.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Welcome to Brew and Chapters</h1>
+    <p>Every Cup, Every Chapter, A New Story.</p>
+    <a href="ourstory.html">Explore Our Story</a>
+  </div>
+</section>
+
+<section class="how-to-use">
+  <h2>How It Works</h2>
+  <div class="timeline">
+    <div class="step"><div class="circle">1</div><p>Explore Menu</p></div>
+    <div class="step"><div class="circle">2</div><p>Build Your Order</p></div>
+    <div class="step"><div class="circle">3</div><p>Dine In or Take Away</p></div>
+    <div class="step"><div class="circle">4</div><p>Checkout</p></div>
+  </div>
+</section>
+
+<div class="pic">
+  <img src="../image/photo2.jpg" alt="photo1">
+  <div class="line">
+    <h2>BREW AND CHAPTERS</h2>
+    <p>“Welcome to Brew & Chapters — where the love of books and coffee meet in perfect harmony. Our café is a cozy haven for book lovers and coffee enthusiasts alike, offering rich brews and a relaxing space to unwind. Born from a simple idea of bringing people together, we’ve grown into a beloved community spot where stories are shared, friendships bloom, and memories are made. Come visit us and let the aroma of coffee and the rustle of pages transport you.”</p>
+  </div>
+</div>
+
+<!-- FEATURED MENU -->
+<section class="featured-menu">
+  <h2>Customer Favorites</h2>
+
+  <div class="menu-scroll">
+
+<!-- Espresso -->
+<div class="menu-card">
+  <img src="../image/espresso.jpg" onclick='openPopup(menuData.coffee[0])'>
+  <div class="menu-content">
+    <h3>Espresso</h3>
+    <button class="view-btn" onclick='openPopup(menuData.coffee[0])'>View</button>
+  </div>
+</div>
+
+<!-- Seasonal -->
+<div class="menu-card">
+  <img src="../image/Pumpkin spice latte.jpeg" onclick='openPopup(menuData.special[0])'>
+  <div class="menu-content">
+    <h3>Pumpkin Latte</h3>
+    <button class="view-btn" onclick='openPopup(menuData.special[0])'>View</button>
+  </div>
+</div>
+
+<!-- Smoothies -->
+<div class="menu-card">
+  <img src="../image/smoothie.jpg" onclick='openPopup(menuData.cold[0])'>
+  <div class="menu-content">
+    <h3>Smoothies</h3>
+    <button class="view-btn" onclick='openPopup(menuData.cold[0])'>View</button>
+  </div>
+</div>
+
+<!-- Cookies -->
+<div class="menu-card">
+  <img src="../image/Cookies.jpg" onclick='openPopup(menuData.cookies[0])'>
+  <div class="menu-content">
+    <h3>Cookies</h3>
+    <button class="view-btn" onclick='openPopup(menuData.cookies[0])'>View</button>
+  </div>
+</div>
+
+<!-- Pumpkin Latte -->
+<div class="menu-card">
+  <img src="../image/seasonal special.png" onclick='openPopup(menuData.special[1])'>
+  <div class="menu-content">
+    <h3>Pumpkin Latte</h3>
+    <button class="view-btn" onclick='openPopup(menuData.special[1])'>View</button>
+  </div>
+</div>
+
+</div>
+  <a href="menu.html" class="btn">See Full Menu</a>
+</section>
+
+<!-- POPUP -->
+<div id="productPopup" class="popup">
+  <div class="popup-box">
+
+    <div class="popup-left">
+      <img id="popupImg">
+    </div>
+
+    <span class="close-btn" onclick="closePopup()" aria-label="Close">&times;</span>
+
+    <div class="popup-right">
+      <h2 id="popupName"></h2>
+      <p id="popupPrice">₹0</p>
+
+      <p id="sizeLabel">Size</p>
+      <div class="size-options"></div>
+
+      <p id="sugarLabel">Sugar Level</p>
+      <div class="options" id="sugarOptions"></div>
+
+      <p id="strengthLabel">Coffee Strength</p>
+      <div class="options" id="strengthOptions"></div>
+
+      <div class="qty-box">
+        <button onclick="decreaseQtyPopup()">-</button>
+        <span id="popupQty">1</span>
+        <button onclick="increaseQtyPopup()">+</button>
+      </div>
+
+      <button class="popup-cart-btn" onclick="addFromPopup()">
+        Add to Cart
+      </button>
+
+      <h3 class="suggest-title">You may also like</h3>
+
+      <!-- IMPORTANT -->
+      <div id="suggestionsBox" class="suggestions"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Testimonials -->
+<section class="reviews-section">
+  <h2>What Our Guests Say</h2>
+
+  <div class="reviews-container">
+    <div class="reviews-track">
+
+      <div class="review-card">
+        <p>“The best place to relax with coffee and a book. Cozy vibes!”</p>
+        <h4>- Priya</h4>
+      </div>
+
+      <div class="review-card">
+        <p>“Friendly staff, amazing brews, and the perfect reading nook.”</p>
+        <h4>- Rahul</h4>
+      </div>
+
+      <div class="review-card">
+        <p>“A unique café where every cup tells a story.”</p>
+        <h4>- Meera</h4>
+      </div>
+
+      <!-- NEW REVIEWS -->
+      <div class="review-card">
+        <p>“Absolutely loved the ambience and the coffee quality!”</p>
+        <h4>- Arjun</h4>
+      </div>
+
+      <div class="review-card">
+        <p>“Perfect place to work, chill and enjoy great food.”</p>
+        <h4>- Sneha</h4>
+      </div>
+
+      <!-- DUPLICATE (for smooth infinite scroll) -->
+      <div class="review-card">
+        <p>“The best place to relax with coffee and a book. Cozy vibes!”</p>
+        <h4>- Priya</h4>
+      </div>
+
+      <div class="review-card">
+        <p>“Friendly staff, amazing brews, and the perfect reading nook.”</p>
+        <h4>- Rahul</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: info@brewandchapters.com</p>
+      <p>Phone: +91 13254 76980</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Visit Us</h3>
+      <p>123 Coffee Lane, Bangalore</p>
+      <p>Mon–Sun: 8am – 10pm</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="../image/instagram.png"></a>
+        <a href="#"><img src="../image/facebook.png"></a>
+        <a href="#"><img src="../image/twitter.png"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2025 Brew & Chapters. All Rights Reserved.</p>
+</footer>
+
+<!-- LOADER -->
+<div id="loader">
+<img src="../image/logo.png" alt="Logo">
+</div>
+
+<script src="../js/script.js"></script>
+<script type="module" src="../js/menu.js"></script>
+<script type="module" src="../js/auth.js"></script>
+
+<script src="../js/header.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

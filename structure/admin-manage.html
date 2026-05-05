@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brew & Chapters</title>
+
+<link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/nav.css">
+<link rel="stylesheet" href="../style/admin.css">
+<link rel="stylesheet" href="../style/admin-manage.css">
+<link rel="icon" href="../image/logo1.png?v=2">
+
+</head>
+
+<body>
+
+<div id="site-nav" data-page="manage" data-variant="admin"></div>
+<section class="admin-container">
+
+<h1>Manage Content</h1>
+
+<!-- ================= MENU ================= -->
+
+<div class="section-box">
+<h2>Menu</h2>
+
+<div class="menu-form">
+
+<input type="text" id="menuName" placeholder="Item Name">
+<input type="text" id="menuDesc" placeholder="Description">
+
+<!-- 🔥 CATEGORY -->
+<select id="menuCategory">
+  <option value="coffee">Coffee</option>
+  <option value="tea">Tea</option>
+  <option value="pastries">Pastries</option>
+  <option value="cookies">Cookies</option>
+  <option value="cold">Cold Drinks</option>
+  <option value="special">Special</option>
+</select>
+
+<!-- 🔥 IMAGE -->
+<input type="file" id="menuImage">
+
+<!-- 🔥 SIZES -->
+<h4>Sizes (optional)</h4>
+<input type="number" id="sizeSmall" placeholder="Small Price">
+<input type="number" id="sizeMedium" placeholder="Medium Price">
+<input type="number" id="sizeLarge" placeholder="Large Price">
+
+<!-- 🔥 SINGLE PRICE -->
+<input type="number" id="menuPrice" placeholder="Price (if no sizes)">
+
+<!-- 🔥 OPTIONS -->
+<h4>Options (optional)</h4>
+
+<label>Sugar</label>
+<input type="text" id="menuSugar" placeholder="Less Sugar,Normal,Extra Sweet">
+
+<label>Strength</label>
+<input type="text" id="menuStrength" placeholder="Light,Medium,Strong">
+
+<button onclick="addMenu()">Add</button>
+
+</div>
+
+<div id="menuList"></div>
+</div>
+
+
+<!-- ================= EVENTS ================= -->
+<div class="section-box">
+<h2>Events</h2>
+
+<div class="menu-form">
+<input type="text" id="eventName" placeholder="Event Name">
+<input type="text" id="eventDesc" placeholder="Description">
+<input type="file" id="menuImage">
+<button onclick="addEvent()">Add</button>
+</div>
+
+<div id="eventList"></div>
+</div>
+
+
+<!-- ================= LIBRARY ================= -->
+<div class="section-box">
+<h2>Library</h2>
+
+<div class="menu-form">
+<input type="text" id="bookName" placeholder="Book Name">
+<input type="text" id="bookAuthor" placeholder="Author">
+
+<!-- ✅ MOVE CATEGORY HERE -->
+<select id="bookCategory">
+  <option value="romance">Romance</option>
+  <option value="thriller">Mystery / Thriller</option>
+  <option value="classics">Classics</option>
+  <option value="fantasy">Fantasy</option>
+  <option value="contemporary">Contemporary</option>
+  <option value="non-fiction">Non-Fiction</option>
+</select>
+
+<input type="file" id="menuImage">
+<button onclick="addBook()">Add</button>
+</div>
+
+<div id="bookList"></div>
+</div>
+
+<script src="../js/script.js"></script>
+<script type="module" src="../js/admin-manage.js"></script>
+
+<script src="../js/nav.js"></script>
+</body>
+</html>

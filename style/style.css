@@ -1,0 +1,660 @@
+/* General Page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1eaea;
+  color: #3e2723;
+  padding-top: 3.5rem !important; /* offset for fixed navbar */
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  height: 3.5rem;
+  padding: 10px 25px;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 3000 !important;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* logo */
+
+.logo {
+  background-image: url(../image/logo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 6rem;
+  width: 7.6rem;
+  position: relative;
+  left: -0.5rem;
+}
+
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+}
+
+/* Push the actions UL to the far right on desktop */
+nav ul.nav-actions {
+  margin-left: auto;
+}
+
+nav ul li {
+  margin: 0 17px; 
+}
+
+.cart-item{
+  margin: 0 1.7rem;
+}
+.orders-item,
+.profile-item,
+.logout-item {
+  margin: 0 7px;  
+}
+
+.cart-item{
+margin-left:auto;
+}
+
+.cart-link{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:bold;
+}
+
+.nav-icons{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+
+nav ul li a {
+  color: #3e2723;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a{
+  color:#3e2723;
+  text-decoration:none;
+  font-weight:bold;
+  position:relative;
+  padding-bottom:4px;
+}
+
+/* animated underline */
+
+nav ul li a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#3e2723;
+left:0;
+bottom:0;
+transition:width .3s ease;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* ================= ICONS ================= */
+
+.orders-link{
+display:flex;
+align-items:center;
+color:#3e2723;
+text-decoration:none;
+}
+
+.orders-icon{
+width:26px;
+height:26px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.orders-icon:hover{
+transform:scale(1.15);
+}
+
+.orders-icon,
+.profile-icon,
+.logout-icon{
+transition:transform .25s ease;
+}
+
+.orders-icon:hover,
+.profile-icon:hover,
+.logout-icon:hover{
+transform:scale(1.15);
+}
+
+.profile-btn{
+background:transparent;
+border:none;
+cursor:pointer;
+display:flex;
+align-items:center;
+}
+
+.profile-icon{
+width:24px;
+height:24px;
+}
+
+.profile-btn:hover{
+transform:scale(1.1);
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  transition: 0.25s ease;
+}
+
+.logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+}
+
+.logout-text {
+  display: none;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+  z-index:-1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size:1.2em;
+  margin-bottom:20px;
+}
+
+.hero a {
+  background-color:#3e2723;
+  color:#f1eaea;
+  padding:10px 20px;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+.hero a:hover {
+  background-color:#5c3d38;
+}
+
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+background:#f1eaea;
+padding:4rem 2rem;
+text-align:center;
+}
+
+.testimonial-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:2rem;
+}
+
+.testimonial{
+background:#fff;
+padding:1.5rem;
+border-radius:8px;
+width:300px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-scroll {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;  
+  margin: auto;        
+}
+
+/* BUTTON FIX */
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn {
+  padding: 6px;
+  font-size: 12px;
+}
+
+.add-cart-btn {
+  padding: 6px;
+  font-size: 12px;
+}
+
+/* FIX POPUP CONFLICT */
+.popup {
+  display: none;
+}
+
+.popup.active {
+  display: flex !important;
+}
+
+/* ================= FOOTER ================= */
+
+/* ===== FOOTER FIX ===== */
+
+footer {
+  background: #3e2723;
+  color: #fff;
+  padding: 50px 20px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* EACH COLUMN */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+/* HEADINGS */
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffcc80;
+}
+
+/* TEXT */
+.footer-section p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* SOCIAL ICONS */
+.footer-section a img {
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.footer-section a img:hover {
+  transform: scale(1.2);
+}
+
+/* BOTTOM LINE */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.social img {
+  width: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social img:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#f4efe9;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+transition:opacity .8s ease, visibility .8s ease;
+}
+
+#loader img{
+width:180px;
+transform:scale(.6);
+animation:logoZoomIn 1.8s ease forwards;
+}
+
+@keyframes logoZoomIn{
+
+0%{
+transform:scale(.6);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:scale(1.4);
+opacity:1;
+}
+
+}
+
+#loader.hide{
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+}
+
+/* ================= MOBILE NAVBAR ================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #3e2723;
+}
+
+/* MOBILE DESIGN — superseded by the mobile header block below */
+
+
+
+/* ============================================================
+   RESPONSIVE — additive only. Works with existing toggleMenu()
+   which toggles .show on #nav-links and .menu-open on body.
+   ============================================================ */
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #3e2723;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  margin-left: auto;
+  user-select: none;
+}
+
+@media (max-width: 992px) {
+  nav { padding: 8px 16px; }
+  nav ul li { margin: 0 10px; }
+  .logo { height: 5rem; width: 6rem; }
+}
+
+/* ============================================================
+   MOBILE HEADER (≤768px)
+   Layout (single row, no wrap):
+     [☰ hamburger] [logo]  ............  [cart] [orders] [profile/login]
+   - Hamburger sits at the LEFT (before the logo)
+   - Logo right next to hamburger
+   - Cart / Orders / Profile (or Logout) stay on the RIGHT in one row
+   - The page links (#nav-links) collapse into a dropdown panel toggled
+     by .show (handled by nav.css)
+   ============================================================ */
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    min-height: 3.5rem;
+    padding: 8px 12px;
+    display: flex;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 8px;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Hamburger button visible on mobile */
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+    padding: 6px 8px;
+    flex: 0 0 auto;
+  }
+
+  /* LEFT GROUP: split nav-actions so the hamburger li renders before the logo
+     using flex order. This works for BOTH public + admin variants without
+     relying on absolute positioning. */
+  nav ul.nav-actions {
+    order: 3;
+    margin-left: auto;
+    flex: 0 0 auto;
+    flex-wrap: nowrap !important;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hamburger item sits at the far LEFT of the navbar */
+  nav ul.nav-actions > li.menu-toggle-item {
+    order: -1;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+
+  /* Logo sits next to the hamburger */
+  .logo {
+    order: 1;
+    height: 3rem;
+    width: 3.8rem;
+    left: 0;
+    margin-left: 48px;
+    flex: 0 0 auto;
+  }
+
+  /* Reset any admin-specific auto margin that could shove icons off-screen */
+  .logout-item { margin-left: 0 !important; }
+
+  /* Page-links collapsible panel */
+  nav ul#nav-links {
+    order: 4;
+  }
+
+  body.menu-open { overflow: hidden; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 6px 8px; gap: 6px; }
+  .logo { height: 2.6rem; width: 3.2rem; margin-left: 44px; }
+  .menu-toggle { font-size: 22px; padding: 4px 6px; }
+  nav ul.nav-actions { gap: 2px; }
+  nav ul.nav-actions > li { margin: 0 2px; }
+}
+
+/* footer responsive (covers footers defined in style.css) */
+@media (max-width: 768px) {
+  footer .footer-content,
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-section { text-align: center; }
+}
+
+/* ============================================================
+   GLOBAL RESPONSIVENESS SAFETY NET
+   Prevents horizontal overflow and broken layouts site-wide
+   without altering existing component designs.
+   ============================================================ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, video, iframe, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Long words / URLs should wrap instead of overflowing */
+p, h1, h2, h3, h4, h5, h6, a, span, li, td, th, label {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Tables become scrollable on small screens */
+table { max-width: 100%; }
+@media (max-width: 768px) {
+  .table-wrap, .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* Common container helpers */
+.container, .wrapper, main, section {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Tablet tweaks */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 2.4em; }
+  .hero p  { font-size: 1.05em; }
+}
+
+/* Mobile tweaks for hero / sections */
+@media (max-width: 768px) {
+  .hero { height: auto; min-height: 55vh; padding: 40px 16px; }
+  .hero h1 { font-size: 1.9em; }
+  .hero p  { font-size: 1em; }
+  .hero a  { padding: 10px 16px; font-size: 0.95em; }
+
+  section, .testimonials { padding: 2rem 1rem; }
+  .testimonial { width: 100%; max-width: 360px; }
+
+  .menu-scroll { gap: 14px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.55em; }
+  .hero p  { font-size: 0.95em; }
+}
+
+
+/* ============================================================
+   FIX v6: hard lock navbar fixed globally.
+   Keeps the existing navbar visual design but prevents later
+   shared/mobile CSS from changing it back to relative/sticky.
+   ============================================================ */
+html body {
+  padding-top: 3.5rem !important;
+}
+
+body > #site-nav nav,
+#site-nav nav,
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 3000 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  html body {
+    padding-top: 3.5rem !important;
+  }
+
+  body > #site-nav nav,
+  #site-nav nav,
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 3000 !important;
+  }
+}

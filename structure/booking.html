@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew & Chapters</title>
+
+<link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/nav.css">
+<link rel="stylesheet" href="../style/booking.css">
+<link rel="icon" href="../image/logo1.png?v=2">
+</head>
+
+<body>
+<div id="site-nav" data-page="booking"></div>
+
+
+<section class="booking-section">
+
+  <div class="booking-card">
+
+    <!-- BACK BUTTON -->
+    <a href="menu.html" class="back-btn">&#8592;</a>
+
+    <!-- TITLE -->
+    <h2>Book a Table</h2>
+    <p class="tagline">Reserve your cozy reading corner ☕</p>
+
+    <!-- FORM -->
+    <form id="bookingForm">
+
+      <!-- NAME -->
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- PHONE -->
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <!-- DATE -->
+      <div class="form-row">
+        <label for="date">Date</label>
+        <input type="date" id="dateInput" name="date" required>
+      </div>
+
+      <!-- TIME -->
+      <div class="form-row">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" min="09:00" max="22:00" required>
+      </div>
+
+      <!-- GUESTS -->
+      <div class="form-row">
+        <label for="guests">Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" required>
+      </div>
+
+      <!-- REQUESTS -->
+      <div class="form-row">
+        <label for="requests">Special Requests</label>
+        <textarea id="requests" name="requests" rows="3" placeholder="Optional..."></textarea>
+      </div>
+
+      <!-- BUTTON -->
+      <button type="submit" class="book-btn">Reserve Table</button>
+
+      <!-- MESSAGE -->
+      <p id="message"></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- JS -->
+<script type="module" src="../js/booking.js"></script>
+<script type="module" src="../js/auth.js"></script>
+
+<script src="../js/script.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

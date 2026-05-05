@@ -1,0 +1,59 @@
+.status-badge {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* COLORS */
+.status-pending {
+  background: #3e2723;
+}
+
+.status-preparing {
+  background: #b3be20;
+}
+
+.status-ready {
+  background: #5eab23;
+}
+
+.orders-container{
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+
+.order-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+.order-card ul{
+margin-top:10px;
+padding-left:20px;
+}
+
+.history{
+opacity:0.7;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .orders-container { padding: 24px 16px; }
+  .order-card { padding: 16px; }
+}
+
+@media (max-width: 480px) {
+  .orders-container { padding: 16px 10px; }
+  .status-badge { font-size: 11px; padding: 4px 10px; }
+}

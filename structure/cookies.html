@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Chapters</title>
+
+  <link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/nav.css">
+  <link rel="stylesheet" href="../style/coffee.css">
+  <link rel="icon" href="../image/logo1.png?v=2">
+</head>
+
+<body>
+
+<div id="site-nav" data-page="menu"></div>
+<h2 style="text-align:center;">Cookies Menu</h2>
+
+<div id="menuItems" class="menu-grid"></div>
+
+
+<!-- ================= POPUP ================= -->
+
+<div id="productPopup" class="popup">
+
+  <div class="popup-box">
+
+    <!-- LEFT -->
+    <div class="popup-left">
+      <img id="popupImg">
+    </div>
+
+    <!-- RIGHT -->
+    <div class="popup-right">
+
+      <span class="close-btn" onclick="closePopup()">✖</span>
+
+      <h2 id="popupName"></h2>
+
+      <!-- PRICE -->
+      <p id="popupPrice" class="price">₹0</p>
+      <p id="sizeLabel">Size</p>
+      <div class="size-options"></div>
+
+      <p id="sugarLabel">Sugar Level</p>
+      <div class="options" id="sugarOptions"></div>
+
+      <p id="strengthLabel">Coffee Strength</p>
+      <div class="options" id="strengthOptions"></div>
+
+      <!-- QTY -->
+      <div class="qty-box">
+        <button onclick="decreaseQtyPopup()">-</button>
+        <span id="popupQty">1</span>
+        <button onclick="increaseQtyPopup()">+</button>
+      </div>
+
+      <!-- ADD -->
+      <button class="popup-cart-btn" onclick="addFromPopup()">Add to Cart</button>
+
+      <!-- SUGGEST -->
+      <h3 class="suggest-title">You may also like</h3>
+      <div class="suggestions" id="suggestionsBox"></div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script type="module" src="../js/menu.js"></script>
+<script type="module" src="../js/auth.js"></script>
+<script>openMenu("cookies");</script>
+
+<script src="../js/script.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

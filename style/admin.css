@@ -1,0 +1,402 @@
+/* ===== DASHBOARD CARDS ===== */
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  width: 220px;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #3e2723;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6d4c41;
+}
+
+
+/* ===== LOGOUT ===== */
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #3e2723;
+  font-size: 22px;
+}
+
+.logout-btn:hover {
+  transform: scale(1.15);
+}
+
+
+/* ===== ADMIN CONTAINER ===== */
+
+.admin-container {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: #3e2723;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+
+/* ===== GRID LAYOUT ===== */
+
+#ordersContainer,
+#historyContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  justify-content: center;   /* centers cards */
+  gap: 5rem;
+  margin-top: 30px;
+}
+
+
+/* ===== ORDER CARD ===== */
+
+.order-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+}
+
+.order-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* ===== HEADER ===== */
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-header h3 {
+  margin: 0;
+  color: #3e2723;
+  font-size: 18px;
+}
+
+
+/* ===== STATUS BADGE ===== */
+
+.status-badge {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.status-pending {
+  background: #3e2723;
+}
+
+.status-preparing {
+  background: #b3be20;
+}
+
+.status-ready {
+  background: #5eab23;
+}
+
+
+/* ===== ORDER DETAILS ===== */
+
+.order-details {
+  margin-top: 5px;
+}
+
+.order-details p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ===== ITEMS ===== */
+
+.order-items {
+  margin-top: 12px;
+}
+
+.order-items div {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.order-items small {
+  color: #777;
+}
+
+
+/* ===== BUTTONS ===== */
+
+.status-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.status-buttons button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.status-buttons button:nth-child(1) {
+  background: #3e2723;
+}
+
+.status-buttons button:nth-child(2) {
+  background: #3e2723;
+}
+
+.status-buttons button:nth-child(3) {
+  background: #3e2723;
+}
+
+.status-buttons button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+
+/* ===== DELETE BUTTON ===== */
+
+.delete-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.03);
+}
+
+
+/* ===== MENU FORM (UNCHANGED) ===== */
+
+.menu-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.menu-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+/* ===== MENU ITEM CARD ===== */
+
+.menu-item-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== MESSAGES PAGE ===== */
+
+/* ===== MESSAGE CARDS ===== */
+
+#messagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.message-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+.message-card h3 {
+  color: #3e2723;
+}
+
+.message-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.message-card .delete-btn {
+  margin-top: 10px;
+  background: #d32f2f;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+}
+
+/* MESSAGE TEXT */
+.message-card p:last-child {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.section-box{
+  background:#fff;
+  padding:20px;
+  margin-bottom:30px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.section-box h2{
+  margin-bottom:15px;
+}
+
+/* PUSH LOGOUT TO RIGHT */
+.logout-item {
+  margin-left: auto;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+  .dashboard-cards { gap: 18px; }
+  #ordersContainer,
+  #historyContainer {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-container { padding: 32px 16px; }
+  .admin-container h1 { font-size: 22px; }
+
+  .card { width: 100%; max-width: 320px; padding: 20px; }
+  .card p { font-size: 24px; }
+
+  #ordersContainer,
+  #historyContainer {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .order-card { max-width: 100%; }
+
+  .order-header { flex-wrap: wrap; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .admin-container { padding: 24px 12px; }
+  .order-header h3 { font-size: 16px; }
+}
+
+/* ============================================================
+   FIX v5: Messages page mobile menu cutoff only.
+   Root cause: previous override set min-height:100vh on the
+   absolute dropdown (which starts BELOW the navbar), pushing
+   "Messages" and "Bookings" past the viewport with no usable
+   internal scroll. This restores a proper bounded, scrollable
+   panel just for the Messages page.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Make sure no ancestor on Messages page clips the dropdown */
+  body.page-messages,
+  body.page-messages html,
+  body.page-messages #site-nav,
+  body.page-messages nav {
+    overflow: visible !important;
+  }
+  body.page-messages { overflow-x: hidden !important; }
+
+  /* Anchor the dropdown to the viewport, cap its height,
+     and force it to scroll internally so all 5 items show. */
+  body.page-messages nav ul#nav-links.show {
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: calc(100vh - 60px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding-bottom: 16px !important;
+    z-index: 2000 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.page-messages nav ul#nav-links.show > li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Lock background scroll while menu open so the panel handles scrolling */
+  body.page-messages.menu-open { overflow: hidden !important; }
+}

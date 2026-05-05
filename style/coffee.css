@@ -1,0 +1,392 @@
+/* ===== MENU SECTION ===== */
+
+.menu-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #4b2e2b;
+}
+
+
+/* ===== GRID ===== */
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+/* ===== CARD ===== */
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+
+/* ===== IMAGE ===== */
+
+.menu-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+
+/* ===== CONTENT ===== */
+
+.menu-content {
+  padding: 18px;
+}
+
+.menu-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #3e2723;
+}
+
+.menu-content p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.price {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+
+.add-cart-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #5a3e36;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+  background: #3e2723;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  width: 85%;
+  max-width: 950px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+
+/* LEFT IMAGE */
+.popup-left img {
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* RIGHT */
+.popup-right {
+  padding: 30px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup-right h2 {
+  margin-bottom: 10px;
+}
+
+.popup-right p {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5a3e36;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+/* OPTIONS */
+.options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.options button {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button.active {
+  background: #5a3e36;
+  color: white;
+  border-color: #5a3e36;
+}
+
+
+/* ADD BUTTON */
+.popup-cart-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #5a3e36;
+  color: white;
+  margin-top: 10px;
+}
+
+
+/* SUGGESTIONS */
+.suggest-title {
+  margin-top: 20px;
+}
+
+/* ===== SUGGESTIONS (COMPACT) ===== */
+
+.suggestions {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+}
+
+.suggest-card {
+  min-width: 90px;          /* smaller */
+  padding: 6px;
+  text-align: center;
+  background: transparent;  /* no heavy box */
+}
+
+.suggest-card img {
+  width: 100%;
+  height: 60px;             /* smaller image */
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.suggest-card p {
+  font-size: 11px;          /* smaller text */
+  margin: 4px 0;
+}
+
+.suggest-card button {
+  padding: 3px 6px;
+  font-size: 11px;
+  border-radius: 50%;
+  background: #5a3e36;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== SIZE OPTIONS ===== */
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.size-options button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Hover */
+.size-options button:hover {
+  border-color: #6d4c41;
+  color: #6d4c41;
+}
+
+/* Active (selected) */
+.size-options button.active {
+  background: #6d4c41;
+  color: white;
+  border-color: #6d4c41;
+}
+
+/* ===== QTY ===== */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.qty-box button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #5a3e36;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.qty-box span {
+  font-weight: bold;
+}
+
+
+/* ===== POPUP BUTTON ===== */
+.popup-cart-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  background: #5a3e36;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-box {
+  min-height: 520px;
+}
+
+.popup-left img {
+  height: 100%;
+  min-height: 520px;
+}
+
+/* ===== ANIMATION ===== */
+.added-animation {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #5a3e36;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 20px;
+  animation: fade 2s;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid #5a3e36;
+  background: transparent;
+  color: #5a3e36;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #5a3e36;
+  color: white;
+}
+
+@keyframes fade {
+  0% {opacity:0}
+  50% {opacity:1}
+  100% {opacity:0}
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+  .menu-grid { gap: 20px; }
+  .menu-card { width: 220px; }
+}
+
+@media (max-width: 768px) {
+  .menu-section { padding: 30px 16px; }
+  .menu-section h2 { font-size: 24px; }
+  .menu-card { width: 45%; min-width: 160px; }
+  .menu-card img { height: 140px; }
+
+  .popup-box {
+    flex-direction: column;
+    width: 92%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .popup-left img {
+    width: 100%;
+    height: 200px;
+  }
+  .popup-right { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .menu-card { width: 100%; max-width: 280px; }
+  .menu-content h3 { font-size: 16px; }
+}
